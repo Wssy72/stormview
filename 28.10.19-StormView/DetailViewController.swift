@@ -13,16 +13,16 @@ class DetailViewController: UITableViewController {
     @IBOutlet var imageView: UIImageView!
     
     var selectImage: String?
-    var selectImageNumber = 0 //+
+    var selectImageNumber = 0
     var totalPictures = 0
+    var nameImages: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = selectImage
         title = "Picture \(selectImageNumber) of \(totalPictures)"
-        // в строке заголовка детализации, покажите Picture X of Y, а X - позиция выбранного изображения в массиве и Y - общее количество изображений, . print(Picture x индекс of y pictures.count)
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectImage {
@@ -38,9 +38,20 @@ class DetailViewController: UITableViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.hidesBarsOnTap = false
+          navigationController?.hidesBarsOnTap = false
     }
- 
+    @objc func shareTapped() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No image found")
+            return
+            }
+        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
+              
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+        }
+      
+    }
     
     //  title = indexAndCountPicrures
     /*
@@ -53,4 +64,4 @@ class DetailViewController: UITableViewController {
     }
     */
 
-}
+
