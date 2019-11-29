@@ -15,7 +15,6 @@ class DetailViewController: UITableViewController {
     var selectImage: String?
     var selectImageNumber = 0
     var totalPictures = 0
-    var nameImages: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +22,12 @@ class DetailViewController: UITableViewController {
         title = selectImage
         title = "Picture \(selectImageNumber) of \(totalPictures)"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectImage {
             imageView.image = UIImage(named: imageToLoad)
         }
-        
         // Do any additional setup after loading the view.
     }
     // hiades bar or show bar
@@ -45,14 +44,29 @@ class DetailViewController: UITableViewController {
             print("No image found")
             return
             }
-        let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
-              
+        guard let nameImage = selectImage?.description else {
+            print("No text found")
+            return
+        }
+        
+        let items: [Any] = [nameImage]
+        
+        let vc = UIActivityViewController(activityItems: [image, items], applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
         }
-      
     }
-    
+ //let test = [selectImage?.description]
+  //print(test)
+  
+  //guard let nameImages: [Any] = [test, image] else {
+ //     print("No image and text")
+  //   return
+  //}
+ // let image = UIImage(named: "mustache.jpg")
+//var imageIndex = image.description
+     //imageIndex[selectImage] as string
+
     //  title = indexAndCountPicrures
     /*
     // MARK: - Navigation
