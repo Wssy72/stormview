@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A5F36A0523671F330053AE1F /* 28.10.19-StormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "28.10.19-StormView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F36A0523671F330053AE1F /* shareDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shareDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F36A0823671F330053AE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5F36A0A23671F330053AE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5F36A0D23671F330053AE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		A5F369FC23671F330053AE1F = {
 			isa = PBXGroup;
 			children = (
-				A5F36A0723671F330053AE1F /* 28.10.19-StormView */,
+				A5F36A0723671F330053AE1F /* shareDate */,
 				A5F36A0623671F330053AE1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,12 +68,12 @@
 		A5F36A0623671F330053AE1F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5F36A0523671F330053AE1F /* 28.10.19-StormView.app */,
+				A5F36A0523671F330053AE1F /* shareDate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5F36A0723671F330053AE1F /* 28.10.19-StormView */ = {
+		A5F36A0723671F330053AE1F /* shareDate */ = {
 			isa = PBXGroup;
 			children = (
 				A5F36A0823671F330053AE1F /* AppDelegate.swift */,
@@ -85,7 +85,7 @@
 				A5F36A1423671F370053AE1F /* Info.plist */,
 				A5F36A1A236724560053AE1F /* Content */,
 			);
-			path = "28.10.19-StormView";
+			path = shareDate;
 			sourceTree = "<group>";
 		};
 		A5F36A1A236724560053AE1F /* Content */ = {
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5F36A0423671F330053AE1F /* 28.10.19-StormView */ = {
+		A5F36A0423671F330053AE1F /* shareDate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5F36A1723671F370053AE1F /* Build configuration list for PBXNativeTarget "28.10.19-StormView" */;
+			buildConfigurationList = A5F36A1723671F370053AE1F /* Build configuration list for PBXNativeTarget "shareDate" */;
 			buildPhases = (
 				A5F36A0123671F330053AE1F /* Sources */,
 				A5F36A0223671F330053AE1F /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = "28.10.19-StormView";
+			name = shareDate;
 			productName = "28.10.19-StormView";
-			productReference = A5F36A0523671F330053AE1F /* 28.10.19-StormView.app */;
+			productReference = A5F36A0523671F330053AE1F /* shareDate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5F36A0023671F330053AE1F /* Build configuration list for PBXProject "28.10.19-StormView" */;
+			buildConfigurationList = A5F36A0023671F330053AE1F /* Build configuration list for PBXProject "shareDate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5F36A0423671F330053AE1F /* 28.10.19-StormView */,
+				A5F36A0423671F330053AE1F /* shareDate */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5F36A0023671F330053AE1F /* Build configuration list for PBXProject "28.10.19-StormView" */ = {
+		A5F36A0023671F330053AE1F /* Build configuration list for PBXProject "shareDate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5F36A1523671F370053AE1F /* Debug */,
@@ -378,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5F36A1723671F370053AE1F /* Build configuration list for PBXNativeTarget "28.10.19-StormView" */ = {
+		A5F36A1723671F370053AE1F /* Build configuration list for PBXNativeTarget "shareDate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5F36A1823671F370053AE1F /* Debug */,

@@ -48,25 +48,14 @@ class DetailViewController: UITableViewController {
             print("No text found")
             return
         }
+        let itemsProperties: [Any] =  [nameImage, image]
         
-        let items: [Any] = [nameImage]
-        
-        let vc = UIActivityViewController(activityItems: [image, items], applicationActivities: [])
+        let vc = UIActivityViewController(activityItems: itemsProperties, applicationActivities: [])
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
         }
     }
- //let test = [selectImage?.description]
-  //print(test)
-  
-  //guard let nameImages: [Any] = [test, image] else {
- //     print("No image and text")
-  //   return
-  //}
- // let image = UIImage(named: "mustache.jpg")
-//var imageIndex = image.description
-     //imageIndex[selectImage] as string
-
+ 
     //  title = indexAndCountPicrures
     /*
     // MARK: - Navigation
