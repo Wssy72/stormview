@@ -13,7 +13,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet var imageView: UIImageView!
     
     var selectImage: String?
-    var selectImageNumber = 0 //+
+    var selectImageNumber = 0
     var totalPictures = 0
     
     override func viewDidLoad() {
@@ -21,14 +21,13 @@ class DetailViewController: UITableViewController {
 
         title = selectImage
         title = "Picture \(selectImageNumber) of \(totalPictures)"
-        // в строке заголовка детализации, покажите Picture X of Y, а X - позиция выбранного изображения в массиве и Y - общее количество изображений, . print(Picture x индекс of y pictures.count)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
         navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectImage {
             imageView.image = UIImage(named: imageToLoad)
         }
-        
         // Do any additional setup after loading the view.
     }
     // hiades bar or show bar
@@ -38,10 +37,25 @@ class DetailViewController: UITableViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.hidesBarsOnTap = false
+          navigationController?.hidesBarsOnTap = false
+    }
+    @objc func shareTapped() {
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No image found")
+            return
+            }
+        guard let nameImage = selectImage?.description else {
+            print("No text found")
+            return
+        }
+        let itemsProperties: [Any] =  [nameImage, image]
+        
+        let vc = UIActivityViewController(activityItems: itemsProperties, applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+        }
     }
  
-    
     //  title = indexAndCountPicrures
     /*
     // MARK: - Navigation
@@ -53,4 +67,4 @@ class DetailViewController: UITableViewController {
     }
     */
 
-}
+

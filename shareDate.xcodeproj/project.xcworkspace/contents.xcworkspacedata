@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:28.10.19-StormView.xcodeproj">
+      location = "self:/Users/Sergey/Dropbox/xcodetest/testSwift/ShareDate/shareDate.xcodeproj">
    </FileRef>
 </Workspace>
