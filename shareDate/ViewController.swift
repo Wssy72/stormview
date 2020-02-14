@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         title = "Storm View"
         
     navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(sharedPeoples))
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -55,8 +56,11 @@ class ViewController: UITableViewController {
             // now push navigation controller
             navigationController?.pushViewController(vc, animated: true)
         }
-        
     }
-    
-    
+    @objc func sharedPeoples() {
+   let textShared = "This apps favorite my app"
+   let vc = UIActivityViewController(activityItems: [textShared], applicationActivities: [])
+    vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+    present(vc, animated: true)
+    }
 }
